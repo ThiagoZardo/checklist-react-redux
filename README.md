@@ -1,6 +1,6 @@
 # checklist-react-redux
 
-## 0º Instalação do redux
+## 0 Instalação do redux
   npx create-react-app my-app-redux;
   npm install --save redux react-redux
   npm install.
@@ -9,7 +9,7 @@
 
 ================================================================================
 
-## 1º Criar pasta STORE dentro dela criar um index.js.
+## 1 Criar pasta STORE dentro dela criar um index.js.
 
   import { createStore } from 'redux';
   const store = createStore();
@@ -17,7 +17,7 @@
 
 ================================================================================
 
-## 2º Criar pasta REDUCERS dentro dela criar um index.js.
+## 2 Criar pasta REDUCERS dentro dela criar um index.js.
 
   const INITIAL_STATE = {
     value1: '',
@@ -41,7 +41,7 @@
 
 ================================================================================
 
-## 3º Criar pasta ACTIONS dentro dela criar um index.js.
+## 3 Criar pasta ACTIONS dentro dela criar um index.js.
 
   const nomeDaAction = (value1, value2) => ({ 
     type: TIPO_DA_ACTION,
@@ -55,7 +55,7 @@
 
 ================================================================================
 
-## 4º Importar o reducer no STORE no index.js e criar o combinador de reducers.
+## 4 Importar o reducer no STORE no index.js e criar o combinador de reducers.
 
   import { createStore, combineReducers } from 'redux';
   import nomeReducer from '../reducers';
@@ -70,7 +70,7 @@
 
 ================================================================================
 
-## 5º No indice da aplicação do React index.js ou no App.js encapsular tudo com o Provider.
+## 5 No indice da aplicação do React index.js ou no App.js encapsular tudo com o Provider.
 
   import { Provider } from 'react-redux';
   import store from './store';
@@ -85,7 +85,7 @@
 
 ================================================================================
 
-## 6º No Componente.js que contem o botão ou o elemento que chamará ação:
+## 6 No Componente.js que contem o botão ou o elemento que chamará ação:
 
   import nomeDaAction from '../reducers';
 
@@ -109,7 +109,7 @@
 
 ================================================================================
 
-## 7º Ainda no Componente.js que precisará ter acesso a leitura do estado:
+## 7 Ainda no Componente.js que precisará ter acesso a leitura do estado:
 
   import { connect } from 'react-redux';
 
