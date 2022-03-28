@@ -1,11 +1,11 @@
 # checklist-react-redux
 
 ## 0 Instalação do redux
-  npx create-react-app my-app-redux;
-  npm install --save redux react-redux
-  npm install.
+  - npx create-react-app my-app-redux;
+  - npm install --save redux react-redux
+  - npm install.
 
-  npm install redux-devtools-extension 
+  - npm install redux-devtools-extension 
 
 ================================================================================
 
