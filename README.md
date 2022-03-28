@@ -150,10 +150,10 @@ CONNECT =>
 # Checklist react-redux: Passo a passo para guardar no coração e colar na parede
 
 ### Instalação
-[ ] npx create-react-app my-app-redux;
-[ ] npm install redux react-redux;
-[ ] npm install.
-[ ] npm install redux-devtools-extension
+- [x] npx create-react-app my-app-redux;
+- [x] npm install redux react-redux;
+- [x] npm install.
+- [x] npm install redux-devtools-extension
 
 ### Criar dentro do diretório src:
 diretório actions;
