@@ -10,15 +10,15 @@
 ================================================================================
 
 ## 1 Criar pasta STORE dentro dela criar um index.js.
-
+```
   import { createStore } from 'redux';
   const store = createStore();
   export default store;
-
+```
 ================================================================================
 
 ## 2 Criar pasta REDUCERS dentro dela criar um index.js.
-
+```
   const INITIAL_STATE = {
     value1: '',
     value2: '',
@@ -38,7 +38,7 @@
   }
 
   export default nomeReducer;
-
+```
 ================================================================================
 
 ## 3 Criar pasta ACTIONS dentro dela criar um index.js.
