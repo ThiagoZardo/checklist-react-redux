@@ -42,7 +42,7 @@
 ================================================================================
 
 ## 3 Criar pasta ACTIONS dentro dela criar um index.js.
-
+```
   const nomeDaAction = (value1, value2) => ({ 
     type: TIPO_DA_ACTION,
     payload: {
@@ -52,11 +52,11 @@
   });
 
   export default nomeDaAction;
-
+```
 ================================================================================
 
 ## 4 Importar o reducer no STORE no index.js e criar o combinador de reducers.
-
+```
   import { createStore, combineReducers } from 'redux';
   import nomeReducer from '../reducers';
 
@@ -67,11 +67,11 @@
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()   
   );
   export default store; 
-
+```
 ================================================================================
 
 ## 5 No indice da aplicação do React index.js ou no App.js encapsular tudo com o Provider.
-
+```
   import { Provider } from 'react-redux';
   import store from './store';
 
@@ -82,15 +82,15 @@
         </Provider>
       </React.StricMode>
   )
-
+```
 ================================================================================
 
 ## 6 No Componente.js que contem o botão ou o elemento que chamará ação:
-
+```
   import nomeDaAction from '../reducers';
-
+```
    ======================== 1º opção ============================ 
-
+```
   const mapDispatchToProps = (dispatch) => ({
     nomeDaProp: (value1, value2) => dispatch(nomeDaAction(value1, value2)),
   });
@@ -99,18 +99,18 @@
 
   No botão PRECISA CONTER O DISPATCH QUE PASSARA A ACTION PARA O REDEUCER:
   1º opção onClick={ () => prop(estado) }>
-  
+```  
   ======================== 2º opção ============================ 
-  
+```  
   No botão PRECISA CONTER O DISPATCH QUE PASSARA A ACTION PARA O REDEUCER:
   onClick={ () => dispatch(nomeDaAction(value1, value2)) }
   export default connect()(nomeDoComponente);
-
+```
 
 ================================================================================
 
 ## 7 Ainda no Componente.js que precisará ter acesso a leitura do estado:
-
+```
   import { connect } from 'react-redux';
 
   Abaixo do Render() {
@@ -123,7 +123,7 @@
   })
 
   export default connect(mapStateToProps)(NomeDoComponente)
-
+```
 ================================================================================
 
 
