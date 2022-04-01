@@ -18,12 +18,24 @@
 ================================================================================
 
 ## 2 Criar pasta REDUCERS dentro dela criar um index.js.
+#### No Index.js
+```
+  import { combineReducers } from 'redux';
+  import nomeReducer from './nomeReducer';
+
+  const rootReducer = combineReducers({ nomeReducer, wallet });
+
+  export default rootReducer;
+
+``` 
+
+ ##### No 1º reducer
 ```
   const INITIAL_STATE = {
     value1: '',
     value2: '',
   };
-
+  
   function nomeReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
       case 'TIPO_DA_ACTION':
